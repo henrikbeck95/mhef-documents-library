@@ -1,4 +1,4 @@
-package com.math.library.dao.content;
+package com.mhef.library.documents.dao.content;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -12,6 +12,12 @@ import java.io.IOException;
  * @version 0.0.1
  */
 public class ContentReadPdf {
+	/**
+	 * Obtain the content of the file data as if it were an HTML file and maintain the structure through the utilization of HTML tags.
+	 *
+	 * @param pathFileInputDocument The path to a document file. In example, .doc, .docx, .pdf or .txt files are able to be used.
+	 * @return The document content data with the structure through the utilization of HTML tags.
+	 */
 	public static String getDataHtml(String pathFileInputDocument) {
 		String result = "";
 
@@ -38,6 +44,12 @@ public class ContentReadPdf {
 		return result;
 	}
 
+	/**
+	 * Obtain the content of the file data as if it were a TXT file without maintain the structure through the utilization of HTML tags.
+	 *
+	 * @param pathFileInputDocument The path to a document file. In example, .doc, .docx, .pdf or .txt files are able to be used.
+	 * @return The document content data without the structure through the utilization of HTML tags.
+	 */
 	public static String getDataRaw(String pathFileInputDocument) {
 		String result = "";
 

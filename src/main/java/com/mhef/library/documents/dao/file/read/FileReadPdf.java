@@ -1,7 +1,7 @@
-package com.math.library.dao.file.read;
+package com.mhef.library.documents.dao.file.read;
 
-import com.math.library.dao.content.ContentDisplay;
-import com.math.library.dao.content.ContentReadPdf;
+import com.mhef.library.documents.dao.content.ContentDisplay;
+import com.mhef.library.documents.dao.content.ContentReadPdf;
 
 /**
  * @author Henrik Beck
@@ -10,7 +10,7 @@ import com.math.library.dao.content.ContentReadPdf;
 public class FileReadPdf {
 	/**
 	 * @param pathFile The path to a document file. In example, .doc, .docx, .pdf or .txt files are able to be used.
-	 * @return The document file data with the full text data content formatted with the HTML file structure.
+	 * @return The document content data with the structure through the utilization of HTML tags.
 	 */
 	public static String getDataHtml(String pathFile) {
 		return ContentReadPdf.getDataHtml(pathFile);
@@ -18,15 +18,15 @@ public class FileReadPdf {
 
 	/**
 	 * @param pathFile The path to a document file. In example, .doc, .docx, .pdf or .txt files are able to be used.
-	 * @return The document file data with the full text data content without being formatted.
+	 * @return The document content data without the structure through the utilization of HTML tags.
 	 */
 	public static String getDataRaw(String pathFile) {
 		return ContentReadPdf.getDataRaw(pathFile);
 	}
 
 	/**
-	 * @param pathFile The path to a spreadsheet file. In example, .doc, .docx .pdf or .txt files are able to be used.
-	 * @param isFormatted A boolean value key to display the table with colored NULL values instead of the table as raw data.
+	 * @param pathFile The path to a document file. In example, .doc, .docx, .pdf or .txt files are able to be used.
+	 * @param isFormatted A boolean value key to display the file content with the structure through the utilization of HTML tags or not (as a raw data).
 	 */
 	public static void print(String pathFile, boolean isFormatted) {
 		ContentDisplay printer = new ContentDisplay();

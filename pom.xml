@@ -11,29 +11,32 @@
     <url>https://github.com/math-health/mhef-library-documents</url>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+		<java.compiler.version>8</java.compiler.version>
+        <maven.compiler.source>${java.compiler.version}</maven.compiler.source>
+        <maven.compiler.target>${java.compiler.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <library.poi.version>4.1.2</library.poi.version>
-        <library.junit.version>5.9.2</library.junit.version>
+		<library.pdfbox.version>2.0.27</library.pdfbox.version>
+		<library.tika.version>1.27</library.tika.version>
+		<library.slf4j.version>1.7.32</library.slf4j.version>
+		<library.junit.version>5.9.2</library.junit.version>
+		<library.mhef-validation.version>0.0.1</library.mhef-validation.version>
     </properties>
 
     <repositories>
-        <repository>
-            <!--
-            <id>AsposeJavaAPI</id>
-            <name>Aspose Java AP</name>
-            <url>https://releases.aspose.com/java/repo/</url>
-            -->
-            <id>AsposeJavaAPI</id>
-            <name>Aspose Java AP</name>
-            <url>https://packages.atlassian.com/maven-3rdparty/</url>
+		<!--
+		<repository>
+			<id>AsposeJavaAPI</id>
+			<name>Aspose Java AP</name>
+			<url>https://packages.atlassian.com/maven-3rdparty/</url>
+			<url>https://releases.aspose.com/java/repo/</url>
         </repository>
-
+		-->
     </repositories>
 
     <dependencies>
         <!-- JUnit 5 -->
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -49,6 +52,7 @@
         </dependency>
 
         <!-- Apache POI -->
+
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
@@ -59,22 +63,6 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>${library.poi.version}</version>
-        </dependency>
-
-        <!--
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>POIXMLDocument</artifactId>
-            <version>${library.poi.version}</version>
-        </dependency>
-        -->
-
-        <!-- Apache PDFBox -->
-
-        <dependency>
-            <groupId>org.apache.pdfbox</groupId>
-            <artifactId>pdfbox</artifactId>
-            <version>2.0.27</version>
         </dependency>
 
         <!-- Aspose PDF -->
@@ -90,46 +78,49 @@
         </dependency>
 		-->
 
+		<!-- Apache PDF Box -->
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox</artifactId>
-			<version>2.0.27</version>
+			<version>${library.pdfbox.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox-tools</artifactId>
-			<version>2.0.24</version>
+			<version>${library.pdfbox.version}</version>
 		</dependency>
 
+		<!-- Apache Tika -->
 
 		<dependency>
 			<groupId>org.apache.tika</groupId>
 			<artifactId>tika-core</artifactId>
-			<version>1.27</version>
+			<version>${library.tika.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.tika</groupId>
 			<artifactId>tika-parsers</artifactId>
-			<version>1.27</version>
+			<version>${library.tika.version}</version>
 		</dependency>
-
-
-		<!--
-		<dependency>
-			<groupId>org.apache.tika</groupId>
-			<artifactId>tika-core</artifactId>
-			<version>1.27</version>
-		</dependency>
-		-->
-
 
 		<dependency>
-			<groupId>org.apache.tika</groupId>
-			<artifactId>tika-core</artifactId>
-			<version>1.27</version>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${library.slf4j.version}</version>
 		</dependency>
-    </dependencies>
+
+		<!-- MHEF Validation -->
+
+		<dependency>
+			<groupId>com.mhef.library</groupId>
+			<artifactId>validation</artifactId>
+			<version>${library.mhef-validation.version}</version>
+			<scope>system</scope>
+			<systemPath>${pom.basedir}/src/main/resources/libs/validation-0.0.1-SNAPSHOT.jar</systemPath>
+		</dependency>
+	</dependencies>
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (might be moved to parent pom) -->

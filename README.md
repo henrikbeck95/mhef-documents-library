@@ -1,1 +1,1 @@
-# mhef-documents-library
+# MHEF - Documents library
