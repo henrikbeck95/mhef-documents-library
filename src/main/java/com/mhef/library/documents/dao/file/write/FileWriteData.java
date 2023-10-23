@@ -1,6 +1,6 @@
 package com.mhef.library.documents.dao.file.write;
 
-import com.mhef.library.documents.utils.message.MessageDisplay;
+import com.mhef.library.validation.utils.MessageDisplay;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

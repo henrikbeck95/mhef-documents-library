@@ -2,6 +2,10 @@ package com.mhef.library.documents;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * @author Henrik Beck
+ * @version 0.0.1
+ */
 public class AppTest {
 	private static String projectRootPath = "";
 	private static final String pathFileInputDocumentDoc = "/assets/data/file-example-1MB.doc";

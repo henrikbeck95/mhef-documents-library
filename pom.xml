@@ -79,6 +79,7 @@
 		-->
 
 		<!-- Apache PDF Box -->
+
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox</artifactId>
@@ -118,7 +119,7 @@
 			<artifactId>validation</artifactId>
 			<version>${library.mhef-validation.version}</version>
 			<scope>system</scope>
-			<systemPath>${pom.basedir}/src/main/resources/libs/validation-0.0.1-SNAPSHOT.jar</systemPath>
+			<systemPath>${pom.basedir}/src/main/resources/libs/validation-0.0.2.jar</systemPath>
 		</dependency>
 	</dependencies>
 
