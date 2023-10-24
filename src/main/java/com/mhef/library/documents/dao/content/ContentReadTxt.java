@@ -1,4 +1,3 @@
-package com.math.library.documents.dao.content;
+package com.mhef.library.documents.dao.content;
 
-public class ContentReadTxt {
-}
+public class ContentReadTxt {}

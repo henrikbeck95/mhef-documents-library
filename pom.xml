@@ -6,7 +6,7 @@
 
     <groupId>com.mhef.library</groupId>
     <artifactId>documents</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>documents</name>
     <url>https://github.com/math-health/mhef-library-documents</url>
 

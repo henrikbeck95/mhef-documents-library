@@ -1,4 +1,3 @@
-package com.math.library.documents.dao.file.read;
+package com.mhef.library.documents.dao.file.read;
 
-public class FileReadTxt {
-}
+public class FileReadTxt {}

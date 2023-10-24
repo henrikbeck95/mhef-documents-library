@@ -10,7 +10,8 @@ public class AppTest {
 	private static String projectRootPath = "";
 	private static final String pathFileInputDocumentDoc = "/assets/data/file-example-1MB.doc";
 	private static final String pathFileInputDocumentDocx = "/assets/data/file-example-1MB.docx";
-	private static final String pathFileInputDocumentPdf = "/assets/data/file-example-1MB.pdf";
+//	private static final String pathFileInputDocumentPdf = "/assets/data/file-example-1MB.pdf";
+	private static final String pathFileInputDocumentPdf = "/assets/data/01861307.pdf";
 	private static final String pathFileInputDocumentTxt = "/assets/data/file-example-2KB.txt";
 	private static final String pathFileOutputDocumentDoc = "/assets/dist/output.doc";
 	private static final String pathFileOutputDocumentDocx = "/assets/dist/output.docx";
