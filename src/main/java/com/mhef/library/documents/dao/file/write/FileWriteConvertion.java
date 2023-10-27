@@ -10,8 +10,8 @@ package com.mhef.library.documents.dao.file.write;
  * @todo Implement the convertFromDocToTxt method.
  *
  * @todo Implement the convertFromDocxToDoc method.
- * @todo Implement the convertFromDocxToPdf method.
  * @todo Implement the convertFromDocxToHtml method.
+ * @todo Implement the convertFromDocxToPdf method.
  * @todo Implement the convertFromDocxToTxt method.
  *
  * @todo Implement the convertFromPdfToDoc method.

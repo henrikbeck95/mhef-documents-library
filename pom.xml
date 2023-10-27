@@ -6,7 +6,7 @@
 
     <groupId>com.mhef.library</groupId>
     <artifactId>documents</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>documents</name>
     <url>https://github.com/math-health/mhef-library-documents</url>
 
@@ -27,7 +27,7 @@
 		<!--
 		<repository>
 			<id>AsposeJavaAPI</id>
-			<name>Aspose Java AP</name>
+			<name>Aspose Java API</name>
 			<url>https://packages.atlassian.com/maven-3rdparty/</url>
 			<url>https://releases.aspose.com/java/repo/</url>
         </repository>
