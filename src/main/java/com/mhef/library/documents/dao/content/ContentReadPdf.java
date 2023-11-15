@@ -1,5 +1,6 @@
 package com.mhef.library.documents.dao.content;
 
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.pdfbox.tools.PDFText2HTML;
@@ -9,7 +10,7 @@ import java.io.IOException;
 
 /**
  * @author Henrik Beck
- * @version 0.0.1
+ * @version 0.0.2
  */
 public class ContentReadPdf {
 	/**
@@ -28,12 +29,22 @@ public class ContentReadPdf {
 			// Create the PDFTextStripper
 			PDFTextStripper stripper = new PDFText2HTML();
 
+			// Set the character encoding to UTF-8
+			stripper.setLineSeparator("\n");
+			stripper.setWordSeparator(" ");
+			stripper.setSortByPosition(true);
+
 			// Set the output directory
-			stripper.setStartPage(1); // Optional: Set the start page for conversion
-			stripper.setEndPage(document.getNumberOfPages()); // Optional: Set the end page for conversion
+			stripper.setStartPage(1); // Optional: Set the start page for conversions
+			stripper.setEndPage(document.getNumberOfPages()); // Optional: Set the end page for conversions
 
 			// Store the PDF content
-			result = stripper.getText(document);
+//			result = stripper.getText(document);
+			String htmlText = stripper.getText(document);
+			String decodedHtmlText = StringEscapeUtils.unescapeHtml4(htmlText);
+			result = new String(decodedHtmlText.getBytes("ISO-8859-1"), "UTF-8");
+//			result = new String(decodedHtmlText.getBytes("windows-1252"), "UTF-8");
+//			result = new String(decodedHtmlText.getBytes("US-ASCII"), "UTF-8");
 
 			// Close the PDF document
 			document.close();
@@ -59,6 +70,9 @@ public class ContentReadPdf {
 
 			// Create the PDFTextStripper
 			PDFTextStripper stripper = new PDFTextStripper();
+			stripper.setLineSeparator(System.getProperty("line.separator"));
+			stripper.setStartPage(1);
+			stripper.setEndPage(document.getNumberOfPages());
 
 			// Store the PDF content
 			result = stripper.getText(document);

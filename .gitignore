@@ -1,5 +1,6 @@
 organizing/
 assets/dist/
+docs/uml/
 
 target/
 !.mvn/wrapper/maven-wrapper.jar

@@ -5,7 +5,7 @@ import com.mhef.library.documents.dao.content.ContentReadPdf;
 
 /**
  * @author Henrik Beck
- * @version 0.0.1
+ * @version 0.0.2
  */
 public class FileReadPdf {
 	/**

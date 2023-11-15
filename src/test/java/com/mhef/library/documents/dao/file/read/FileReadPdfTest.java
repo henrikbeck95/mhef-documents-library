@@ -5,6 +5,11 @@ import com.mhef.library.documents.dao.content.ContentReadPdf;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * @author Henrik Beck
+ * @version 0.0.2
+ * @see <a href="https://github.com/math-health/mhef-library-documents/">Math Health - Documents Library<a>
+ */
 class FileReadPdfTest {
 	@BeforeAll
 	static void setupListLoadValues() {
